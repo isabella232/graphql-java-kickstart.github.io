@@ -60,7 +60,7 @@
 
     <link rel="stylesheet" href="https://www.graphql-java-kickstart.com/stylesheets/application.css">
     <link rel="stylesheet" href="https://www.graphql-java-kickstart.com/fonts/material-icons.css">
-    <link rel="stylesheet" href="https://www.graphql-java-kickstart.com/stylesheets/highlight/tomorrow.css">
+    <link rel="stylesheet" href="https://www.graphql-java-kickstart.com/stylesheets/highlight/androidstudio.css">
 
     
     
@@ -573,8 +573,8 @@ GraphQL Java Tools works extremely well if you already have domain POJOs that ho
 A few libraries exist to ease the boilerplate pain, including <a href="http://graphql-java.readthedocs.io/en/latest/schema.html">GraphQL-Java&rsquo;s built-in schema-first wiring</a>, but none (so far) do type and datafetcher discovery.</li>
 <li><strong>Stateful Data Fetchers</strong>:  If you&rsquo;re using an IOC container (like Spring), it&rsquo;s hard to wire up datafetchers that make use of beans you&rsquo;ve already defined without a bunch of fragile configuration.  GraphQL Java Tools allows you to register &ldquo;Resolvers&rdquo; for any type that can bring state along and use that to resolve fields.</li>
 <li><strong>Generated DataFetchers</strong>:  GraphQL Java Tools automatically creates data fetchers for your fields that call the appropriate method on your java class.  This means all you have to do to create a new field is add the field definition to your schema and add a corresponding method on your class.</li>
-<li><strong>Type-&gt;Class Discovery</strong>:  GraphQL Java Tools starts from your root objects (Query, Mutation) and, as it&rsquo;s generating data fetchers for you, starts to learn about the classes you use for a certain GraphQL type.</li>
-<li><strong>Class Validation</strong>:  Since there aren&rsquo;t any compile-time checks of the type-&gt;class relationship, GraphQL Java Tools will warn you if you provide classes/types that you don&rsquo;t need to, as well as erroring if you use the wrong Java class for a certain GraphQL type when it builds the schema.</li>
+<li><strong>Type → Class Discovery</strong>:  GraphQL Java Tools starts from your root objects (Query, Mutation) and, as it&rsquo;s generating data fetchers for you, starts to learn about the classes you use for a certain GraphQL type.</li>
+<li><strong>Class Validation</strong>:  Since there aren&rsquo;t any compile-time checks of the type → class relationship, GraphQL Java Tools will warn you if you provide classes/types that you don&rsquo;t need to, as well as throwing errors if you use the wrong Java class for a certain GraphQL type when it builds the schema.</li>
 <li><strong>Unit Testing</strong>:  Since your GraphQL schema is independent of your data model, this makes your classes simple and extremely testable.</li>
 </ul>
 
