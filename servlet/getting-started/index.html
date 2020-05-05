@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <title>Getting started - GraphQL Java Kickstart</title>
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.69.2" />
 
     
     <meta name="description" content="Documentation for GraphQL Java Servlet">
@@ -489,7 +489,7 @@ repositories <span style="color:#f92672">{</span>
 <span style="color:#f92672">}</span>
 
 dependencies <span style="color:#f92672">{</span>
-    compile <span style="color:#e6db74">&#39;com.graphql-java-kickstart:graphql-java-servlet:7.0.0&#39;</span>
+    compile <span style="color:#e6db74">&#39;com.graphql-java-kickstart:graphql-java-servlet:9.1.0&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h2 id="build-with-maven">Build with Maven</h2>
 <p>First you set up a basic build script. You can use any build system you like, but the code you need to work with
@@ -501,7 +501,7 @@ needed to add <code>graphql-java-servlet</code> to your application.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
   <span style="color:#f92672">&lt;groupId&gt;</span>com.graphql-java-kickstart<span style="color:#f92672">&lt;/groupId&gt;</span>
   <span style="color:#f92672">&lt;artifactId&gt;</span>graphql-java-servlet<span style="color:#f92672">&lt;/artifactId&gt;</span>
-  <span style="color:#f92672">&lt;version&gt;</span>7.0.0<span style="color:#f92672">&lt;/version&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>9.1.0<span style="color:#f92672">&lt;/version&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><h2 id="create-a-servlet-class">Create a Servlet class</h2>
 <p>Create a servlet class extending <code>SimpleGraphQLHttpServlet</code>. This is the basic &ldquo;Hello world&rdquo; example. It creates
@@ -541,7 +541,7 @@ start a jetty webserver and expose the Hello world Servlet on localhost. It will
 Press any key to stop the server.
 </code></pre></div><h3 id="send-a-graphql-query">Send a GraphQL Query</h3>
 <p>You can now send a GraphQL query to your local servlet, for example using <a href="https://insomnia.rest/graphql/">Insomnia</a>.
-In this case the URL to post the GraphQL query to is http://localhost:8080/graphql-java-servlet-hello-world/graphql.</p>
+In this case the URL to post the GraphQL query to is [http://localhost:8080/graphql-java-servlet-hello-world/graphql].</p>
 <p>The following GraphQL query is what the example implementation supports:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">query <span style="color:#f92672">{</span>
     hello

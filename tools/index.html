@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <title>About GraphQL Java Tools - GraphQL Java Kickstart</title>
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.69.2" />
 
     
     <meta name="description" content="Documentation for GraphQL Java Servlet">
@@ -569,9 +569,8 @@ GraphQL Java Tools works extremely well if you already have domain POJOs that ho
 <h2 id="why-graphql-java-tools">Why GraphQL Java Tools?</h2>
 <ul>
 <li><strong>Schema First</strong>:  GraphQL Java Tools allows you to write your schema in a simple, portable way using the <a href="http://graphql.org/learn/schema/">GraphQL schema language</a> instead of hard-to-read builders in code.</li>
-<li><strong>Minimal Boilerplate</strong>:  It takes a lot of work to describe your GraphQL-Java objects manually, and quickly becomes unreadable.
-A few libraries exist to ease the boilerplate pain, including <a href="http://graphql-java.readthedocs.io/en/latest/schema.html">GraphQL-Java&rsquo;s built-in schema-first wiring</a>, but none (so far) do type and datafetcher discovery.</li>
-<li><strong>Stateful Data Fetchers</strong>:  If you&rsquo;re using an IOC container (like Spring), it&rsquo;s hard to wire up datafetchers that make use of beans you&rsquo;ve already defined without a bunch of fragile configuration.  GraphQL Java Tools allows you to register &ldquo;Resolvers&rdquo; for any type that can bring state along and use that to resolve fields.</li>
+<li><strong>Minimal Boilerplate</strong>:  It takes a lot of work to describe your GraphQL-Java objects manually, and quickly becomes unreadable.</li>
+<li><strong>Stateful Data Fetchers</strong>:  If you&rsquo;re using an IOC container (like Spring), it&rsquo;s hard to wire up data fetchers that make use of beans you&rsquo;ve already defined without a bunch of fragile configuration.  GraphQL Java Tools allows you to register &ldquo;Resolvers&rdquo; for any type that can bring state along and use that to resolve fields.</li>
 <li><strong>Generated DataFetchers</strong>:  GraphQL Java Tools automatically creates data fetchers for your fields that call the appropriate method on your java class.  This means all you have to do to create a new field is add the field definition to your schema and add a corresponding method on your class.</li>
 <li><strong>Type → Class Discovery</strong>:  GraphQL Java Tools starts from your root objects (Query, Mutation) and, as it&rsquo;s generating data fetchers for you, starts to learn about the classes you use for a certain GraphQL type.</li>
 <li><strong>Class Validation</strong>:  Since there aren&rsquo;t any compile-time checks of the type → class relationship, GraphQL Java Tools will warn you if you provide classes/types that you don&rsquo;t need to, as well as throwing errors if you use the wrong Java class for a certain GraphQL type when it builds the schema.</li>

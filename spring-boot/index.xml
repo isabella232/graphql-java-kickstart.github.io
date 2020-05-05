@@ -21,7 +21,7 @@
  Java 8 Spring Boot &amp;gt; 2.x.x (spring-boot-starter-web)  Quick start To add graphql-spring-boot to your project and get started quickly, do the following.
 Build with Gradle Make sure mavenCentral is amongst your repositories:
 repositories { mavenCentral() } Add the respective starter dependencies you want to use:
-dependencies { compile &amp;#39;com.graphql-java-kickstart:graphql-spring-boot-starter:5.2&amp;#39; compile &amp;#39;com.graphql-java-kickstart:graphiql-spring-boot-starter:5.2&amp;#39; compile &amp;#39;com.graphql-java-kickstart:voyager-spring-boot-starter:5.2&amp;#39; testCompile &amp;#39;com.graphql-java-kickstart:graphql-spring-boot-starter-test:5.2&amp;#39; } Build with Maven Add the respective starter dependencies you want to use:</description>
+dependencies { compile &amp;#39;com.graphql-java-kickstart:graphql-spring-boot-starter:7.0.1&amp;#39; compile &amp;#39;com.graphql-java-kickstart:graphiql-spring-boot-starter:7.0.1&amp;#39; compile &amp;#39;com.graphql-java-kickstart:voyager-spring-boot-starter:7.0.1&amp;#39; testCompile &amp;#39;com.graphql-java-kickstart:graphql-spring-boot-starter-test:7.0.1&amp;#39; } Build with Maven Add the respective starter dependencies you want to use:</description>
     </item>
     
     <item>
