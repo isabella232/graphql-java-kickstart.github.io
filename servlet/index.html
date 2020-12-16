@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <title>About GraphQL Java Servlet - GraphQL Java Kickstart</title>
-    <meta name="generator" content="Hugo 0.69.2" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     
     <meta name="description" content="Documentation for GraphQL Java Servlet">
@@ -437,6 +437,60 @@
 
 
             
+              
+              
+
+
+
+
+
+
+<li class="md-nav__item">
+  <a href="https://www.graphql-java-kickstart.com/servlet/dataloaders/" title="Dataloaders"
+      class="md-nav__link">
+			
+			Dataloaders
+  </a>
+</li>
+
+
+            
+              
+              
+
+
+
+
+
+
+<li class="md-nav__item">
+  <a href="https://www.graphql-java-kickstart.com/servlet/servlet-listener/" title="Servlet Listener"
+      class="md-nav__link">
+			
+			Servlet Listener
+  </a>
+</li>
+
+
+            
+              
+              
+
+
+
+
+
+
+<li class="md-nav__item">
+  <a href="https://www.graphql-java-kickstart.com/servlet/osgi/" title="OSGi"
+      class="md-nav__link">
+			
+			OSGi
+  </a>
+</li>
+
+
+            
 
           
         
@@ -477,7 +531,7 @@ The documentation on this site focuses around the usage of the servlet. Although
 into the aspects of GraphQL Java as well, make sure to look at the
 <a href="https://www.graphql-java.com/documentation/latest/">GraphQL Java documentation</a> for more in depth details
 regarding GraphQL Java itself.</p>
-<p>We try to stay up to date with GraphQL Java as much as possible. The current version supports <strong>GraphQL Java 10.0</strong>.</p>
+<p>We try to stay up to date with GraphQL Java as much as possible. The current version supports <strong>GraphQL Java 14.0</strong>.</p>
 <p>This project requires at least Java 8.</p>
 <h2 id="quick-start">Quick start</h2>
 <p>See <a href="https://www.graphql-java-kickstart.com/servlet/getting-started/">Getting started</a> for more detailed instructions.</p>
@@ -489,14 +543,14 @@ regarding GraphQL Java itself.</p>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Add the <code>graphql-java-servlet</code> dependency:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">dependencies <span style="color:#f92672">{</span>
-    compile <span style="color:#e6db74">&#39;com.graphql-java-kickstart:graphql-java-servlet:6.2.0&#39;</span>
+    compile <span style="color:#e6db74">&#39;com.graphql-java-kickstart:graphql-java-servlet:9.1.0&#39;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h3 id="build-with-maven">Build with Maven</h3>
 <p>Add the <code>graphql-java-servlet</code> dependency:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
   <span style="color:#f92672">&lt;groupId&gt;</span>com.graphql-java-kickstart<span style="color:#f92672">&lt;/groupId&gt;</span>
   <span style="color:#f92672">&lt;artifactId&gt;</span>graphql-java-servlet<span style="color:#f92672">&lt;/artifactId&gt;</span>
-  <span style="color:#f92672">&lt;version&gt;</span>6.2.0<span style="color:#f92672">&lt;/version&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>9.1.0<span style="color:#f92672">&lt;/version&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><h3 id="create-a-servlet-class">Create a Servlet class</h3>
 <p>Creating the Servlet class requires various parameters to be provided at the moment. We&rsquo;re working on simplifying
@@ -524,7 +578,46 @@ to see what&rsquo;s needed to create a Servlet with a schema.</p>
     <span style="color:#f92672">&lt;/snapshots&gt;</span>
   <span style="color:#f92672">&lt;/repository&gt;</span>
 <span style="color:#f92672">&lt;/repositories&gt;</span>
-</code></pre></div>
+</code></pre></div><h2 id="usage">Usage</h2>
+<p>The servlet supports the following request formats:</p>
+<ul>
+<li>GET request to <code>../schema.json</code>: Get the result of an introspection query.</li>
+<li>GET request with query parameters (query only, no mutation):
+<ul>
+<li>query</li>
+<li>operationName (optional)</li>
+<li>variables (optional)</li>
+</ul>
+</li>
+<li>POST body JSON object with fields:
+<ul>
+<li>query</li>
+<li>operationName (optional)</li>
+<li>variables (optional)</li>
+</ul>
+</li>
+<li>POST multipart part named &ldquo;graphql&rdquo; containing JSON object with fields:
+<ul>
+<li>query</li>
+<li>operationName (optional)</li>
+<li>variables (optional)</li>
+</ul>
+</li>
+<li>POST multipart parts named &ldquo;query&rdquo;, &ldquo;operationName&rdquo; (optional), and &ldquo;variables&rdquo; (optional)</li>
+<li>POST with Content Type &ldquo;application/graphql&rdquo; will treat the HTTP POST body contents as the GraphQL query string</li>
+</ul>
+<h2 id="spring-framework-support">Spring Framework support</h2>
+<p>To use the servlet with Spring Framework, either use the <a href="https://www.graphql-java-kickstart.com/spring-boot/">Spring Boot starter</a> or simply define a <code>ServletRegistrationBean</code> in a web app:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Bean</span>
+ServletRegistrationBean <span style="color:#a6e22e">graphQLServletRegistrationBean</span><span style="color:#f92672">(</span>GraphQLSchema schema<span style="color:#f92672">,</span> ExecutionStrategy executionStrategy<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>GraphQLOperationListener<span style="color:#f92672">&gt;</span> operationListeners<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ServletRegistrationBean<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> SimpleGraphQLServlet<span style="color:#f92672">(</span>schema<span style="color:#f92672">,</span> executionStrategy<span style="color:#f92672">,</span> operationListeners<span style="color:#f92672">),</span> <span style="color:#e6db74">&#34;/graphql&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="graphql-subscription-support">GraphQL Subscription support</h2>
+<p>Subscriptions over WebSocket are fully supported within Spring Boot, but may require some work if you&rsquo;re using another
+framework. There is an example <a href="https://github.com/graphql-java-kickstart/samples/tree/master/subscription-with-authentication">here</a>.
+Internally, <a href="https://www.oracle.com/technical-resources/articles/java/jsr356.html">JSR 356</a> is used for WebSocket
+support. The endpoint is <a href="https://github.com/graphql-java-kickstart/graphql-java-servlet/blob/38af304a9da1a57ac7475098b7fccec1b063646b/graphql-java-servlet/src/main/java/graphql/kickstart/servlet/GraphQLWebsocketServlet.java">GraphQLWebSocketServlet</a>.</p>
+
 
 
 				

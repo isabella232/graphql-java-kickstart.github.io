@@ -6,11 +6,7 @@
     <description>Recent content in About GraphQL Java Tools on GraphQL Java Kickstart</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2016 21:07:13 +0100</lastBuildDate>
-    
-	<atom:link href="https://www.graphql-java-kickstart.com/tools/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 08 Mar 2016 21:07:13 +0100</lastBuildDate><atom:link href="https://www.graphql-java-kickstart.com/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting started</title>
       <link>https://www.graphql-java-kickstart.com/tools/getting-started/</link>

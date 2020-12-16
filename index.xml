@@ -6,11 +6,7 @@
     <description>Recent content on GraphQL Java Kickstart</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2016 21:07:13 +0100</lastBuildDate>
-    
-	<atom:link href="https://www.graphql-java-kickstart.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 08 Mar 2016 21:07:13 +0100</lastBuildDate><atom:link href="https://www.graphql-java-kickstart.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting started</title>
       <link>https://www.graphql-java-kickstart.com/servlet/getting-started/</link>
@@ -50,6 +46,16 @@ dependencies { compile &amp;#39;com.</description>
     </item>
     
     <item>
+      <title>Dataloaders</title>
+      <link>https://www.graphql-java-kickstart.com/servlet/dataloaders/</link>
+      <pubDate>Wed, 07 Nov 2018 00:11:02 +0100</pubDate>
+      
+      <guid>https://www.graphql-java-kickstart.com/servlet/dataloaders/</guid>
+      <description>It is possible to create context, and consequently dataloaders, in both a request scope and a per query scope by customizing GraphQLContextBuilder and selecting the appropriate ContextSetting with the provided GraphQLConfiguration. A new DataLoaderRegistry should be created in each call to the GraphQLContextBuilder, and the servlet will call the builder at the appropriate times. For example:
+public class CustomGraphQLContextBuilder implements GraphQLServletContextBuilder { private final DataLoader userDataLoader; public CustomGraphQLContextBuilder(DataLoader userDataLoader) { this.</description>
+    </item>
+    
+    <item>
       <title>Defining a schema</title>
       <link>https://www.graphql-java-kickstart.com/tools/schema-definition/</link>
       <pubDate>Wed, 07 Nov 2018 00:11:02 +0100</pubDate>
@@ -59,6 +65,16 @@ dependencies { compile &amp;#39;com.</description>
 // My application class SchemaParser.newParser() .schemaString(&amp;#34;Query { }&amp;#34;) or as files on the classpath:
 // My application class SchemaParser.newParser() .file(&amp;#34;my-schema.graphqls&amp;#34;) // my-schema.graphqls Query { } Multiple sources will be concatenated together in the order given, allowing you to modularize your schema if desired.
 Resolvers and Data Classes GraphQL Java Tools maps fields on your GraphQL objects to methods and properties on your java objects.</description>
+    </item>
+    
+    <item>
+      <title>Servlet Listener</title>
+      <link>https://www.graphql-java-kickstart.com/servlet/servlet-listener/</link>
+      <pubDate>Fri, 15 May 2020 09:28:02 +0100</pubDate>
+      
+      <guid>https://www.graphql-java-kickstart.com/servlet/servlet-listener/</guid>
+      <description>The GraphQL Servlet library allows you to add a Servlet Listener for listening to the GraphQL request. It provides hooks into the servlet request execution (success, error, and finally):
+public class MyServlet extends GraphQLHttpServlet { @Override protected GraphQLConfiguration getConfiguration() { return GraphQLConfiguration.with(createSchema()) .with(queryInvoker) .with(Arrays.asList(listener)) .build(); } } Instrumentation The Servlet Listener listens to the servlet request, but not to the GraphQL query execution. If you want to listen to that you should use the Instrumentation provided by GraphQL Java.</description>
     </item>
     
     <item>
@@ -122,6 +138,17 @@ directive @uppercase on FIELD_DEFINITION type Query { hello: String @uppercase }
 To add your custom SchemaDirectiveWiring to graphql-java-tools pass it along when creating the SchemaParser using
 SchemaParser.newParser().directive(&amp;quot;name&amp;quot;, new MySchemaDirectiveWiring()).build() Basic usage Let&amp;rsquo;s say you defined a custom directive to make text uppercase in a resource schema.graphqls:
 directive @uppercase on FIELD_DEFINITION type Query { hello: String @uppercase } And the actual implementation is the following:</description>
+    </item>
+    
+    <item>
+      <title>OSGi</title>
+      <link>https://www.graphql-java-kickstart.com/servlet/osgi/</link>
+      <pubDate>Fri, 15 May 2020 09:28:02 +0100</pubDate>
+      
+      <guid>https://www.graphql-java-kickstart.com/servlet/osgi/</guid>
+      <description>The OsgiGraphQLHttpServlet uses a &amp;ldquo;provider&amp;rdquo; model to supply the servlet with the required objects:
+ GraphQLQueryProvider: Provides query fields to the GraphQL schema. GraphQLMutationProvider: Provides mutation fields to the GraphQL schema. GraphQLTypesProvider: Provides type information to the GraphQL schema. ExecutionStrategyProvider: Provides an execution strategy for running each query. GraphQLContextBuilder: Builds a context for running each query.  Examples You can now find some example on how to use graphql-java-servlet.
+Requirements The OSGi examples use Maven as a build tool because it requires plugins that are not (yet) available for Gradle.</description>
     </item>
     
   </channel>

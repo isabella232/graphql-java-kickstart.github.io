@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <title>Schema parser options - GraphQL Java Kickstart</title>
-    <meta name="generator" content="Hugo 0.69.2" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     
     <meta name="description" content="Documentation for GraphQL Java Servlet">
@@ -576,7 +576,7 @@ Use <code>SchemaParserOptions.newBuilder()</code> to build an options object to 
 <p><code>objectMapperConfigurer</code>: Exposes the Jackson <code>ObjectMapper</code> that handles marshalling arguments in method resolvers.  Every method resolver gets its own mapper, and the configurer can configure it differently based on the GraphQL field definition.</p>
 </li>
 <li>
-<p><code>preferGraphQLResolver</code>: In cases where you have a Resolver class and legacy class that conflict on type arguements, use the Resolver class instead of throwing an error.
+<p><code>preferGraphQLResolver</code>: In cases where you have a Resolver class and legacy class that conflict on type arguments, use the Resolver class instead of throwing an error.
 Specifically this situation can occur when you have a graphql schema type <code>Foo</code> with a <code>bars</code> property and classes:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// legacy class you can&#39;t change
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Foo</span> <span style="color:#f92672">{</span>
@@ -615,8 +615,8 @@ If this property is true it will ignore the legacy version.</p>
 
           
           
-            <a href="https://www.graphql-java-kickstart.com/tools/schema-definition/"
-                title="Defining a schema"
+            <a href="https://www.graphql-java-kickstart.com/servlet/servlet-listener/"
+                title="Servlet Listener"
                 class="md-flex md-footer-nav__link md-footer-nav__link--prev"
                 rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
@@ -629,7 +629,7 @@ If this property is true it will ignore the legacy version.</p>
                   <span class="md-footer-nav__direction">
                     Previous
                   </span>
-                  Defining a schema
+                  Servlet Listener
                 </span>
               </div>
             </a>
