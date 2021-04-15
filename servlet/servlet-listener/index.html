@@ -18,9 +18,9 @@ for listening to the GraphQL request. It provides hooks into the servlet request
   <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><h2 id=instrumentation>Instrumentation</h2><p>The Servlet Listener listens to the servlet request, but not to the GraphQL query execution.
-If you want to listen to that you should use the <a href=https://www.graphql-java.com/documentation/v11/instrumentation/>Instrumentation</a>
+If you want to listen to that you should use the <a href=https://www.graphql-java.com/documentation/v16/instrumentation/>Instrumentation</a>
 provided by GraphQL Java. You can extend <a href=https://github.com/graphql-java/graphql-java/blob/master/src/main/java/graphql/execution/instrumentation/SimpleInstrumentation.java>SimpleInstrumentation</a>
-to quickly create a custom implementation and use it when creating the <code>GraphQLConfiguration</code>.</p><p>See the <a href=https://www.graphql-java.com/documentation/v11/instrumentation/>GraphQL Java documentation</a>
+to quickly create a custom implementation and use it when creating the <code>GraphQLConfiguration</code>.</p><p>See the <a href=https://www.graphql-java.com/documentation/v16/instrumentation/>GraphQL Java documentation</a>
 for details on creating custom instrumentations.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MyServlet</span> <span style=color:#66d9ef>extends</span> GraphQLHttpServlet <span style=color:#f92672>{</span>
 
   <span style=color:#a6e22e>@Override</span>
