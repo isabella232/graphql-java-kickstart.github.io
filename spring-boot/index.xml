@@ -7,5 +7,5 @@ To add your custom SchemaDirectiveWiring to graphql-spring-boot create a bean of
 SchemaDirective.create(&amp;quot;uppercase&amp;quot;, new UppercaseDirective()) Basic usage Let&amp;rsquo;s say you defined a custom directive to make text uppercase in a resource schema.graphqls:
 directive @uppercase on FIELD_DEFINITION type Query { hello: String @uppercase } And the actual implementation is the following:</description></item><item><title>Embedded Editors</title><link>https://www.graphql-java-kickstart.com/spring-boot/embedded-editors/</link><pubDate>Mon, 17 May 2021 07:00:00 -0500</pubDate><guid>https://www.graphql-java-kickstart.com/spring-boot/embedded-editors/</guid><description>The following GraphQL Embedded Editors are bundled for convenience:
 Altair Configuration Parameters GraphQL Playground Configuration Parameters GraphiQL Configuration Parameters GraphQL Voyager Configuration Parameters Altair Altair becomes accessible at the root /altair if the graphql.altair.enabled property is true.
-Note that GraphQL server must be available at /graphql/* context to be discovered by Altair.
+Note that GraphQL server must be available at /graphql/\* context to be discovered by Altair.
 Configuration Parameters Available Spring Boot configuration parameters (either application.</description></item></channel></rss>
