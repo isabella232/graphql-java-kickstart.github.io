@@ -10,35 +10,22 @@ GraphQL Java Kickstart</label><ul class=md-nav__list data-md-scrollfix><li class
     mavenCentral<span style=color:#f92672>()</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><p>Add the respective starter dependencies you want to use:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gradle data-lang=gradle>dependencies <span style=color:#f92672>{</span>
-    compile <span style=color:#e6db74>&#39;com.graphql-java-kickstart:graphql-spring-boot-starter:11.0.0&#39;</span>
-    compile <span style=color:#e6db74>&#39;com.graphql-java-kickstart:graphiql-spring-boot-starter:11.0.0&#39;</span>
-    compile <span style=color:#e6db74>&#39;com.graphql-java-kickstart:voyager-spring-boot-starter:11.0.0&#39;</span>
-    testCompile <span style=color:#e6db74>&#39;com.graphql-java-kickstart:graphql-spring-boot-starter-test:11.0.0&#39;</span>
+    implementation <span style=color:#e6db74>&#39;com.graphql-java-kickstart:graphql-spring-boot-starter:12.0.0&#39;</span>
+
+    <span style=color:#75715e>// testing facilities
+</span><span style=color:#75715e></span>    testImplementation <span style=color:#e6db74>&#39;com.graphql-java-kickstart:graphql-spring-boot-starter-test:12.0.0&#39;</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><h3 id=build-with-maven>Build with Maven</h3><p>Add the respective starter dependencies you want to use:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=color:#f92672>&lt;dependency&gt;</span>
   <span style=color:#f92672>&lt;groupId&gt;</span>com.graphql-java-kickstart<span style=color:#f92672>&lt;/groupId&gt;</span>
   <span style=color:#f92672>&lt;artifactId&gt;</span>graphql-spring-boot-starter<span style=color:#f92672>&lt;/artifactId&gt;</span>
-  <span style=color:#f92672>&lt;version&gt;</span>11.0.0<span style=color:#f92672>&lt;/version&gt;</span>
+  <span style=color:#f92672>&lt;version&gt;</span>12.0.0<span style=color:#f92672>&lt;/version&gt;</span>
 <span style=color:#f92672>&lt;/dependency&gt;</span>
-<span style=color:#f92672>&lt;dependency&gt;</span>
-  <span style=color:#f92672>&lt;groupId&gt;</span>com.graphql-java-kickstart<span style=color:#f92672>&lt;/groupId&gt;</span>
-  <span style=color:#f92672>&lt;artifactId&gt;</span>graphiql-spring-boot-starter<span style=color:#f92672>&lt;/artifactId&gt;</span>
-  <span style=color:#f92672>&lt;version&gt;</span>11.0.0<span style=color:#f92672>&lt;/version&gt;</span>
-<span style=color:#f92672>&lt;/dependency&gt;</span>
-<span style=color:#f92672>&lt;dependency&gt;</span>
-  <span style=color:#f92672>&lt;groupId&gt;</span>com.graphql-java-kickstart<span style=color:#f92672>&lt;/groupId&gt;</span>
-  <span style=color:#f92672>&lt;artifactId&gt;</span>playground-spring-boot-starter<span style=color:#f92672>&lt;/artifactId&gt;</span>
-  <span style=color:#f92672>&lt;version&gt;</span>11.0.0<span style=color:#f92672>&lt;/version&gt;</span>
-<span style=color:#f92672>&lt;/dependency&gt;</span>
-<span style=color:#f92672>&lt;dependency&gt;</span>
-  <span style=color:#f92672>&lt;groupId&gt;</span>com.graphql-java-kickstart<span style=color:#f92672>&lt;/groupId&gt;</span>
-  <span style=color:#f92672>&lt;artifactId&gt;</span>voyager-spring-boot-starter<span style=color:#f92672>&lt;/artifactId&gt;</span>
-  <span style=color:#f92672>&lt;version&gt;</span>11.0.0<span style=color:#f92672>&lt;/version&gt;</span>
-<span style=color:#f92672>&lt;/dependency&gt;</span>
+
+<span style=color:#75715e>&lt;!-- testing facilities --&gt;</span>
 <span style=color:#f92672>&lt;dependency&gt;</span>
   <span style=color:#f92672>&lt;groupId&gt;</span>com.graphql-java-kickstart<span style=color:#f92672>&lt;/groupId&gt;</span>
   <span style=color:#f92672>&lt;artifactId&gt;</span>graphql-spring-boot-starter-test<span style=color:#f92672>&lt;/artifactId&gt;</span>
-  <span style=color:#f92672>&lt;version&gt;</span>11.0.0<span style=color:#f92672>&lt;/version&gt;</span>
+  <span style=color:#f92672>&lt;version&gt;</span>12.0.0<span style=color:#f92672>&lt;/version&gt;</span>
   <span style=color:#f92672>&lt;scope&gt;</span>test<span style=color:#f92672>&lt;/scope&gt;</span>
 <span style=color:#f92672>&lt;/dependency&gt;</span>
 </code></pre></div><h2 id=using-the-latest-development-build>Using the latest development build</h2><p>Snapshot versions of the current <code>master</code> branch are available on JFrog. Check the next snapshot version on
