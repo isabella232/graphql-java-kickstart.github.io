@@ -6,90 +6,93 @@
 <label class="md-icon md-search__icon" for=__search></label><button type=reset class="md-icon md-search__icon" data-md-component=reset tabindex=-1>
 &#xE5CD;</button></form><div class=md-search__output><div class=md-search__scrollwrap data-md-scrollfix><div class=md-search-result data-md-component=result><div class=md-search-result__meta>Search</div><ol class=md-search-result__list></ol></div></div></div></div></div></div><div class="md-flex__cell md-flex__cell--shrink"><div class=md-header-nav__source><a href=https://github.com/graphql-java-kickstart/graphql-spring-boot title="Go to repository" target=_blank class=md-source data-md-source=github><div class=md-source__icon><svg viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#__github" width="24" height="24"/></svg></div><div class=md-source__repository>graphql-java-kickstart/graphql-spring-boot</div></a></div></div></div></nav></header><div class=md-container><nav class=md-tabs data-md-component=tabs><div class="md-tabs__inner md-grid"><ul class=md-tabs__list><li class=md-tabs__item><a href=https://www.graphql-java-kickstart.com/tools/ title=Tools class=md-tabs__link>Tools</a></li><li class=md-tabs__item><a href=https://www.graphql-java-kickstart.com/servlet/ title=Servlet class=md-tabs__link>Servlet</a></li><li class=md-tabs__item><a href=https://www.graphql-java-kickstart.com/spring-boot/ title="Spring Boot" class="md-tabs__link md-tabs__link--active">Spring Boot</a></li><li class=md-tabs__item><a href=https://www.graphql-java-kickstart.com/web-client/ title="Web Client" class=md-tabs__link>Web Client</a></li><li class=md-tabs__item><a href=https://www.graphql-java-kickstart.com/samples/ title=Samples class=md-tabs__link>Samples</a></li><li class=md-tabs__item><a href=https://www.graphql-java-kickstart.com/tutorials/ title=Tutorials class=md-tabs__link>Tutorials</a></li></ul></div></nav><main class=md-main><div class="md-main__inner md-grid" data-md-component=container><div class="md-sidebar md-sidebar--primary" data-md-component=navigation><div class=md-sidebar__scrollwrap><div class=md-sidebar__inner><nav class="md-nav md-nav--primary" data-md-level=0><label class="md-nav__title md-nav__title--site" for=__drawer><a href=https://www.graphql-java-kickstart.com/ title="GraphQL Java Kickstart" class="md-nav__button md-logo"><img src=https://www.graphql-java-kickstart.com/images/logo-graphql-kickstart-2000px.png width=48 height=48></a>
 GraphQL Java Kickstart</label><ul class=md-nav__list data-md-scrollfix><li class=md-nav__item><a href=https://www.graphql-java-kickstart.com/spring-boot/ title="About GraphQL Spring Boot" class=md-nav__link>About GraphQL Spring Boot</a></li><li class=md-nav__item><a href=https://www.graphql-java-kickstart.com/spring-boot/getting-started/ title="Getting started" class=md-nav__link>Getting started</a></li><li class=md-nav__item><a href=https://www.graphql-java-kickstart.com/spring-boot/type-definition-factory/ title="Type Definition Factory" class=md-nav__link>Type Definition Factory</a></li><li class=md-nav__item><a href=https://www.graphql-java-kickstart.com/spring-boot/directives/ title=Directives class=md-nav__link>Directives</a></li><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle=toc type=checkboxd id=__toc>
-<a title="Embedded Editors" href=https://www.graphql-java-kickstart.com/spring-boot/embedded-editors/ class="md-nav__link md-nav__link--active">Embedded Editors</a></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component=toc><div class=md-sidebar__scrollwrap><div class=md-sidebar__inner><nav id=scrollspy class="md-nav md-nav--secondary"></nav></div></div></div><div class=md-content><article class="md-content__inner md-typeset"><h1>Embedded Editors</h1><p>The following GraphQL Embedded Editors are bundled for convenience:</p><ul><li><a href=#altair>Altair</a><ul><li><a href=#configuration-parameters>Configuration Parameters</a></li></ul></li><li><a href=#graphql-playground>GraphQL Playground</a><ul><li><a href=#configuration-parameters-1>Configuration Parameters</a></li></ul></li><li><a href=#graphiql>GraphiQL</a><ul><li><a href=#configuration-parameters-2>Configuration Parameters</a></li></ul></li><li><a href=#graphql-voyager>GraphQL Voyager</a><ul><li><a href=#configuration-parameters-3>Configuration Parameters</a></li></ul></li></ul><h2 id=altair>Altair</h2><p><a href=https://github.com/imolorhe/altair>Altair</a> becomes accessible at the root <code>/altair</code> if the <code>graphql.altair.enabled</code> property is true.</p><p>Note that GraphQL server must be available at <code>/graphql/\*</code> context to be discovered by Altair.</p><h3 id=configuration-parameters>Configuration Parameters</h3><p>Available Spring Boot configuration parameters (either <code>application.yml</code> or <code>application.properties</code>):</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>altair</span>:
-  <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>true</span>
-  <span style=color:#f92672>mapping</span>: <span style=color:#ae81ff>/altair</span>
-  <span style=color:#f92672>subscriptions</span>:
-    <span style=color:#f92672>timeout</span>: <span style=color:#ae81ff>30</span>
-    <span style=color:#f92672>reconnect</span>: <span style=color:#66d9ef>false</span>
-  <span style=color:#f92672>static</span>:
-    <span style=color:#f92672>base-path</span>: <span style=color:#ae81ff>/</span>
-  <span style=color:#f92672>page-title</span>: <span style=color:#ae81ff>Altair</span>
-  <span style=color:#f92672>cdn</span>:
-    <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>false</span>
-    <span style=color:#f92672>version</span>: <span style=color:#ae81ff>4.0.2</span>
-  <span style=color:#f92672>options</span>:
-    <span style=color:#f92672>endpoint-url</span>: <span style=color:#ae81ff>/graphql</span>
-    <span style=color:#f92672>subscriptions-endpoint</span>: <span style=color:#ae81ff>/subscriptions</span>
-    <span style=color:#f92672>initial-settings</span>:
-      <span style=color:#f92672>theme</span>: <span style=color:#ae81ff>dracula</span>
-    <span style=color:#f92672>initial-headers</span>:
-      <span style=color:#f92672>Authorization</span>: <span style=color:#e6db74>&#34;Bearer &lt;your-token&gt;&#34;</span>
-  <span style=color:#f92672>resources</span>:
-    <span style=color:#f92672>initial-query</span>: <span style=color:#ae81ff>defaultQuery.graphql</span>
-    <span style=color:#f92672>initial-variables</span>: <span style=color:#ae81ff>variables.graphql</span>
-    <span style=color:#f92672>initial-pre-request-script</span>: <span style=color:#ae81ff>pre-request.graphql</span>
-    <span style=color:#f92672>initial-post-request-script</span>: <span style=color:#ae81ff>post-request.graphql</span>
-</code></pre></div><h2 id=graphql-playground>GraphQL Playground</h2><p><a href=https://github.com/prisma/graphql-playground>GraphQL Playground</a> becomes accessible at root <code>/playground</code> (or as configured in <code>graphql.playground.mapping</code>) if the <code>graphql.playground.enabled</code> property is true.</p><p>It uses an embedded GraphQL Playground React, in accordance to the official guide, using the &lsquo;minimum HTML&rsquo; approach.</p><h3 id=configuration-parameters-1>Configuration Parameters</h3><p>Available Spring Boot configuration parameters (either <code>application.yml</code> or <code>application.properties</code>):</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>graphql.playground</span>:
-  <span style=color:#f92672>mapping</span>: <span style=color:#ae81ff>/playground</span>
-  <span style=color:#f92672>endpoint</span>: <span style=color:#ae81ff>/graphql</span>
-  <span style=color:#f92672>subscriptionEndpoint</span>: <span style=color:#ae81ff>/subscriptions</span>
-  <span style=color:#f92672>staticPath.base</span>: <span style=color:#ae81ff>my-playground-resources-folder</span>
-  <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>true</span>
-  <span style=color:#f92672>pageTitle</span>: <span style=color:#ae81ff>Playground</span>
-  <span style=color:#f92672>cdn</span>:
-    <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>false</span>
-    <span style=color:#f92672>version</span>: <span style=color:#ae81ff>latest</span>
-  <span style=color:#f92672>settings</span>:
-    <span style=color:#f92672>editor.cursorShape</span>: <span style=color:#ae81ff>line</span>
-    <span style=color:#f92672>editor.fontFamily</span>: <span style=color:#e6db74>&#34;&#39;Source Code Pro&#39;, &#39;Consolas&#39;, &#39;Inconsolata&#39;, &#39;Droid Sans Mono&#39;, &#39;Monaco&#39;, monospace&#34;</span>
-    <span style=color:#f92672>editor.fontSize</span>: <span style=color:#ae81ff>14</span>
-    <span style=color:#f92672>editor.reuseHeaders</span>: <span style=color:#66d9ef>true</span>
-    <span style=color:#f92672>editor.theme</span>: <span style=color:#ae81ff>dark</span>
-    <span style=color:#f92672>general.betaUpdates</span>: <span style=color:#66d9ef>false</span>
-    <span style=color:#f92672>prettier.printWidth</span>: <span style=color:#ae81ff>80</span>
-    <span style=color:#f92672>prettier.tabWidth</span>: <span style=color:#ae81ff>2</span>
-    <span style=color:#f92672>prettier.useTabs</span>: <span style=color:#66d9ef>false</span>
-    <span style=color:#f92672>request.credentials</span>: <span style=color:#ae81ff>omit</span>
-    <span style=color:#f92672>schema.polling.enable</span>: <span style=color:#66d9ef>true</span>
-    <span style=color:#f92672>schema.polling.endpointFilter</span>: <span style=color:#e6db74>&#34;*localhost*&#34;</span>
-    <span style=color:#f92672>schema.polling.interval</span>: <span style=color:#ae81ff>2000</span>
-    <span style=color:#f92672>schema.disableComments</span>: <span style=color:#66d9ef>true</span>
-    <span style=color:#f92672>tracing.hideTracingResponse</span>: <span style=color:#66d9ef>true</span>
-  <span style=color:#f92672>headers</span>:
-    <span style=color:#f92672>headerFor</span>: <span style=color:#ae81ff>AllTabs</span>
-  <span style=color:#f92672>tabs</span>:
-    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Example Tab</span>
-      <span style=color:#f92672>query</span>: <span style=color:#ae81ff>classpath:exampleQuery.graphql</span>
-      <span style=color:#f92672>headers</span>:
-        <span style=color:#f92672>SomeHeader</span>: <span style=color:#ae81ff>Some value</span>
-      <span style=color:#f92672>variables</span>: <span style=color:#ae81ff>classpath:variables.json</span>
-      <span style=color:#f92672>responses</span>:
-        - <span style=color:#ae81ff>classpath:exampleResponse1.json</span>
-        - <span style=color:#ae81ff>classpath:exampleResponse2.json</span>
-</code></pre></div><h2 id=graphiql>GraphiQL</h2><p><a href=https://github.com/graphql/graphiql>GraphiQL</a> becomes accessible at the root <code>/graphiql</code> if <code>graphiql.enabled</code> application property is set to <code>true</code>.</p><p>Note that GraphQL server must be available at <code>/graphql/*</code> context to be discovered by Graph<em>i</em>QL.</p><h3 id=configuration-parameters-2>Configuration Parameters</h3><p>Available Spring Boot configuration parameters (either <code>application.yml</code> or <code>application.properties</code>):</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>graphiql</span>:
-  <span style=color:#f92672>mapping</span>: <span style=color:#ae81ff>/graphiql</span>
-  <span style=color:#f92672>endpoint</span>:
-    <span style=color:#f92672>graphql</span>: <span style=color:#ae81ff>/graphql</span>
-    <span style=color:#f92672>subscriptions</span>: <span style=color:#ae81ff>/subscriptions</span>
-  <span style=color:#f92672>subscriptions</span>:
-    <span style=color:#f92672>timeout</span>: <span style=color:#ae81ff>30</span>
-    <span style=color:#f92672>reconnect</span>: <span style=color:#66d9ef>false</span>
-  <span style=color:#f92672>basePath</span>: <span style=color:#ae81ff>/</span>
-  <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>true</span>
-  <span style=color:#f92672>pageTitle</span>: <span style=color:#ae81ff>GraphiQL</span>
-  <span style=color:#f92672>cdn</span>:
-    <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>false</span>
-    <span style=color:#f92672>version</span>: <span style=color:#ae81ff>latest</span>
-  <span style=color:#f92672>props</span>:
+<a title="Embedded Editors" href=https://www.graphql-java-kickstart.com/spring-boot/embedded-editors/ class="md-nav__link md-nav__link--active">Embedded Editors</a></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component=toc><div class=md-sidebar__scrollwrap><div class=md-sidebar__inner><nav id=scrollspy class="md-nav md-nav--secondary"></nav></div></div></div><div class=md-content><article class="md-content__inner md-typeset"><h1>Embedded Editors</h1><p>The following GraphQL Embedded Editors are bundled for convenience:</p><ul><li><a href=#altair>Altair</a><ul><li><a href=#configuration-parameters>Configuration Parameters</a></li></ul></li><li><a href=#graphql-playground>GraphQL Playground</a><ul><li><a href=#configuration-parameters-1>Configuration Parameters</a></li></ul></li><li><a href=#graphiql>GraphiQL</a><ul><li><a href=#configuration-parameters-2>Configuration Parameters</a></li></ul></li><li><a href=#graphql-voyager>GraphQL Voyager</a><ul><li><a href=#configuration-parameters-3>Configuration Parameters</a></li></ul></li></ul><h2 id=altair>Altair</h2><p><a href=https://github.com/imolorhe/altair>Altair</a> becomes accessible at the root <code>/altair</code> if the <code>graphql.altair.enabled</code> property is true.</p><p>Note that GraphQL server must be available at <code>/graphql/\*</code> context to be discovered by Altair.</p><h3 id=configuration-parameters>Configuration Parameters</h3><p>Available Spring Boot configuration parameters (either <code>application.yml</code> or <code>application.properties</code>):</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>graphql</span>:
+  <span style=color:#f92672>altair</span>:
+    <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>true</span>
+    <span style=color:#f92672>mapping</span>: <span style=color:#ae81ff>/altair</span>
+    <span style=color:#f92672>subscriptions</span>:
+      <span style=color:#f92672>timeout</span>: <span style=color:#ae81ff>30</span>
+      <span style=color:#f92672>reconnect</span>: <span style=color:#66d9ef>false</span>
+    <span style=color:#f92672>static</span>:
+      <span style=color:#f92672>base-path</span>: <span style=color:#ae81ff>/</span>
+    <span style=color:#f92672>page-title</span>: <span style=color:#ae81ff>Altair</span>
+    <span style=color:#f92672>cdn</span>:
+      <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>false</span>
+      <span style=color:#f92672>version</span>: <span style=color:#ae81ff>4.0.2</span>
+    <span style=color:#f92672>options</span>:
+      <span style=color:#f92672>endpoint-url</span>: <span style=color:#ae81ff>/graphql</span>
+      <span style=color:#f92672>subscriptions-endpoint</span>: <span style=color:#ae81ff>/subscriptions</span>
+      <span style=color:#f92672>initial-settings</span>:
+        <span style=color:#f92672>theme</span>: <span style=color:#ae81ff>dracula</span>
+      <span style=color:#f92672>initial-headers</span>:
+        <span style=color:#f92672>Authorization</span>: <span style=color:#e6db74>&#34;Bearer &lt;your-token&gt;&#34;</span>
     <span style=color:#f92672>resources</span>:
-      <span style=color:#f92672>query</span>: <span style=color:#ae81ff>query.graphql</span>
-      <span style=color:#f92672>defaultQuery</span>: <span style=color:#ae81ff>defaultQuery.graphql</span>
-      <span style=color:#f92672>variables</span>: <span style=color:#ae81ff>variables.graphql</span>
-    <span style=color:#f92672>variables</span>:
-      <span style=color:#f92672>editorTheme</span>: <span style=color:#e6db74>&#34;solarized light&#34;</span>
-  <span style=color:#f92672>headers</span>:
-    <span style=color:#f92672>Authorization</span>: <span style=color:#e6db74>&#34;Bearer &lt;your-token&gt;&#34;</span>
+      <span style=color:#f92672>initial-query</span>: <span style=color:#ae81ff>defaultQuery.graphql</span>
+      <span style=color:#f92672>initial-variables</span>: <span style=color:#ae81ff>variables.graphql</span>
+      <span style=color:#f92672>initial-pre-request-script</span>: <span style=color:#ae81ff>pre-request.graphql</span>
+      <span style=color:#f92672>initial-post-request-script</span>: <span style=color:#ae81ff>post-request.graphql</span>
+</code></pre></div><h2 id=graphql-playground>GraphQL Playground</h2><p><a href=https://github.com/prisma/graphql-playground>GraphQL Playground</a> becomes accessible at root <code>/playground</code> (or as configured in <code>graphql.playground.mapping</code>) if the <code>graphql.playground.enabled</code> property is true.</p><p>It uses an embedded GraphQL Playground React, in accordance to the official guide, using the &lsquo;minimum HTML&rsquo; approach.</p><h3 id=configuration-parameters-1>Configuration Parameters</h3><p>Available Spring Boot configuration parameters (either <code>application.yml</code> or <code>application.properties</code>):</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>graphql</span>:
+  <span style=color:#f92672>playground</span>:
+    <span style=color:#f92672>mapping</span>: <span style=color:#ae81ff>/playground</span>
+    <span style=color:#f92672>endpoint</span>: <span style=color:#ae81ff>/graphql</span>
+    <span style=color:#f92672>subscriptionEndpoint</span>: <span style=color:#ae81ff>/subscriptions</span>
+    <span style=color:#f92672>staticPath.base</span>: <span style=color:#ae81ff>my-playground-resources-folder</span>
+    <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>true</span>
+    <span style=color:#f92672>pageTitle</span>: <span style=color:#ae81ff>Playground</span>
+    <span style=color:#f92672>cdn</span>:
+      <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>false</span>
+      <span style=color:#f92672>version</span>: <span style=color:#ae81ff>latest</span>
+    <span style=color:#f92672>settings</span>:
+      <span style=color:#f92672>editor.cursorShape</span>: <span style=color:#ae81ff>line</span>
+      <span style=color:#f92672>editor.fontFamily</span>: <span style=color:#e6db74>&#34;&#39;Source Code Pro&#39;, &#39;Consolas&#39;, &#39;Inconsolata&#39;, &#39;Droid Sans Mono&#39;, &#39;Monaco&#39;, monospace&#34;</span>
+      <span style=color:#f92672>editor.fontSize</span>: <span style=color:#ae81ff>14</span>
+      <span style=color:#f92672>editor.reuseHeaders</span>: <span style=color:#66d9ef>true</span>
+      <span style=color:#f92672>editor.theme</span>: <span style=color:#ae81ff>dark</span>
+      <span style=color:#f92672>general.betaUpdates</span>: <span style=color:#66d9ef>false</span>
+      <span style=color:#f92672>prettier.printWidth</span>: <span style=color:#ae81ff>80</span>
+      <span style=color:#f92672>prettier.tabWidth</span>: <span style=color:#ae81ff>2</span>
+      <span style=color:#f92672>prettier.useTabs</span>: <span style=color:#66d9ef>false</span>
+      <span style=color:#f92672>request.credentials</span>: <span style=color:#ae81ff>omit</span>
+      <span style=color:#f92672>schema.polling.enable</span>: <span style=color:#66d9ef>true</span>
+      <span style=color:#f92672>schema.polling.endpointFilter</span>: <span style=color:#e6db74>&#34;*localhost*&#34;</span>
+      <span style=color:#f92672>schema.polling.interval</span>: <span style=color:#ae81ff>2000</span>
+      <span style=color:#f92672>schema.disableComments</span>: <span style=color:#66d9ef>true</span>
+      <span style=color:#f92672>tracing.hideTracingResponse</span>: <span style=color:#66d9ef>true</span>
+    <span style=color:#f92672>headers</span>:
+      <span style=color:#f92672>headerFor</span>: <span style=color:#ae81ff>AllTabs</span>
+    <span style=color:#f92672>tabs</span>:
+      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Example Tab</span>
+        <span style=color:#f92672>query</span>: <span style=color:#ae81ff>classpath:exampleQuery.graphql</span>
+        <span style=color:#f92672>headers</span>:
+          <span style=color:#f92672>SomeHeader</span>: <span style=color:#ae81ff>Some value</span>
+        <span style=color:#f92672>variables</span>: <span style=color:#ae81ff>classpath:variables.json</span>
+        <span style=color:#f92672>responses</span>:
+          - <span style=color:#ae81ff>classpath:exampleResponse1.json</span>
+          - <span style=color:#ae81ff>classpath:exampleResponse2.json</span>
+</code></pre></div><h2 id=graphiql>GraphiQL</h2><p><a href=https://github.com/graphql/graphiql>GraphiQL</a> becomes accessible at the root <code>/graphiql</code> if <code>graphql.graphiql.enabled</code> application property is set to <code>true</code>.</p><p>Note that GraphQL server must be available at <code>/graphql/*</code> context to be discovered by Graph<em>i</em>QL.</p><h3 id=configuration-parameters-2>Configuration Parameters</h3><p>Available Spring Boot configuration parameters (either <code>application.yml</code> or <code>application.properties</code>):</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>graphql</span>:
+  <span style=color:#f92672>graphiql</span>:
+    <span style=color:#f92672>mapping</span>: <span style=color:#ae81ff>/graphiql</span>
+    <span style=color:#f92672>endpoint</span>:
+      <span style=color:#f92672>graphql</span>: <span style=color:#ae81ff>/graphql</span>
+      <span style=color:#f92672>subscriptions</span>: <span style=color:#ae81ff>/subscriptions</span>
+    <span style=color:#f92672>subscriptions</span>:
+      <span style=color:#f92672>timeout</span>: <span style=color:#ae81ff>30</span>
+      <span style=color:#f92672>reconnect</span>: <span style=color:#66d9ef>false</span>
+    <span style=color:#f92672>basePath</span>: <span style=color:#ae81ff>/</span>
+    <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>true</span>
+    <span style=color:#f92672>pageTitle</span>: <span style=color:#ae81ff>GraphiQL</span>
+    <span style=color:#f92672>cdn</span>:
+      <span style=color:#f92672>enabled</span>: <span style=color:#66d9ef>false</span>
+      <span style=color:#f92672>version</span>: <span style=color:#ae81ff>latest</span>
+    <span style=color:#f92672>props</span>:
+      <span style=color:#f92672>resources</span>:
+        <span style=color:#f92672>query</span>: <span style=color:#ae81ff>query.graphql</span>
+        <span style=color:#f92672>defaultQuery</span>: <span style=color:#ae81ff>defaultQuery.graphql</span>
+        <span style=color:#f92672>variables</span>: <span style=color:#ae81ff>variables.graphql</span>
+      <span style=color:#f92672>variables</span>:
+        <span style=color:#f92672>editorTheme</span>: <span style=color:#e6db74>&#34;solarized light&#34;</span>
+    <span style=color:#f92672>headers</span>:
+      <span style=color:#f92672>Authorization</span>: <span style=color:#e6db74>&#34;Bearer &lt;your-token&gt;&#34;</span>
 </code></pre></div><p>By default GraphiQL is served from within the package. This can be configured to be served from CDN
 instead, by setting the property <code>graphiql.cdn.enabled</code> to <code>true</code>.</p><p>You are able to set the GraphiQL props as well. The <code>graphiql.props.variables</code> group can contain any
 of the props as defined at <a href=https://github.com/graphql/graphiql#usage>GraphiQL Usage</a>. Since
